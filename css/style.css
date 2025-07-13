@@ -1,0 +1,406 @@
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*RAIZ CORES*/
+:root {
+    font-size: 16px; 
+  --royal-blue-light: #404eed;
+  --royal-blue-dark: #3946d4;
+  --yellow: #ffca3a;
+  --background: #e2e3e9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background: var(--background);
+}
+
+a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.header { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--royal-blue-light);
+  padding: 1rem;
+  color: #ffca3a;
+  /* margin: .5rem 0; */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu a {
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.menu a:hover {
+  background: var(--royal-blue-dark);
+}
+
+nav img{
+    width: 3.5rem; /*logo*/
+}
+
+/*MENU MOBILE*/
+.btn-menu {
+  display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sobre {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px; 
+}
+
+.loja-descricao {
+    width: 100%;
+    max-width: 700px;
+}
+
+.loja-descricao h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.loja-descricao .subtitulo {
+    max-width: 700px;
+    line-height: 32px;
+    text-align: justify;
+    padding: 30px 0;
+}
+
+ .imagem-loja {
+    max-width: 100%;
+    display: block;
+}
+
+/*---------------------Slider---------------------------*/
+img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/*--------------CARDS-PHOTO-STAMPS----------------*/
+.photo-stamps {
+    background-color: #f2cc8f;
+    margin-top: 100px;
+    padding: 60px 20px;
+}
+
+.photo-stamps .subtitle-stamp {
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boxes .card-box {
+    text-align: center;
+    border: 2px solid #daaf6980;
+    border-radius: 8px;
+    padding: 40px 15px;
+    margin-top: 20px;
+}
+
+.boxes .card-box img{
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px #686767ab;
+}
+
+.boxes .card-box h3 {
+    padding: 10px 0;
+}
+
+.boxes .card-box .paragraph-stamp {
+    max-width: 350px;
+    height: 100px;
+    text-indent: 3%;
+    font-style: italic;
+    text-align: center;
+
+}
+
+/*--------------MAPS----------------*/
+
+.location {
+    background: var(--gray-900);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: var(--white);
+    padding: 20px;
+}
+
+.location iframe {
+    border-radius: 12px;
+    
+}
+
+/*--------------RODAPÉ----------------*/
+.rodape {
+    background: #0d0d0d;
+    color: #c2cffc;
+    font-size: 0.8rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.botao-wpp {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 25px;
+    background: #ffffff;
+    border: 3px solid #49ff01;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.botao-wpp:hover {
+    opacity: 0.7;
+}
+
+/*MEDIA QUERIES - RESPONSIVIDADE*/
+@media (min-width: 1440px) {
+    .header{
+        justify-content: space-around;
+    }
+    .loja-descricao .subtitulo {
+        max-width: 800px;  
+    }
+    .loja-descricao h2 {
+        font-size: 62px;
+    }  
+}
+@media (max-width: 1024px) {
+
+    .loja-descricao {
+        max-width: 500px;
+    }
+    .loja-descricao .subtitulo {
+        max-width: 600px;
+    }
+    .cards-total{
+        margin: 5px;
+    }
+    .logo{
+        font-size: 1.2rem;
+    }
+    .boxes {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+@media (max-width: 768px) {
+    .sobre h2 {
+        text-align: center;
+    }
+    .loja-descricao .subtitulo{
+        width: 100%;
+        text-align: justify;
+        line-height: 35px;
+        padding: 0 20px;
+    }
+    .imagem-loja {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .boxes {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 600px) { 
+  .menu {
+      display: block;
+      position: absolute;
+      top: 4.6875rem;
+      left: 0;
+      background: var(--royal-blue-light);
+      text-align: center;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+  }
+  .menu a {
+      padding: 1rem 0;
+      margin-inline: 1rem;
+      border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+      border-radius: 0;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .nav img {
+    margin-top: 10px;
+  }
+  .btn-menu {
+      background: none;
+      border: none;
+      font: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--yellow);
+      padding-block: 1rem;
+      cursor: pointer;
+  }
+  .hamburguer {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+  }
+  .hamburguer::before,
+  .hamburguer::after {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+      position: relative;
+      transition: 0.3s;
+  }
+  .nav.active .menu {
+      height: calc(70vh - 4.6875rem);
+      visibility: visible;
+      overflow-y: auto;
+  }
+  .nav.active .hamburguer {
+      border-top-color: transparent;
+  }
+  .nav.active .hamburguer::before {
+      transform: rotate(135deg);
+  }
+  .nav.active .hamburguer::after {
+      transform: rotate(-135deg);
+      top: -0.4375rem;
+  }
+  .cards-total{
+    width: 75%;
+    margin: 0 auto;
+  }
+  .boxes {
+    flex-direction: column;
+  }
+  .subtitle-stamp h2 {
+    font-size: 1.2em;
+  }
+  .location iframe {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+    .sobre {
+        flex-direction: column;
+    }
+    .loja-descricao h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .loja-descricao .subtitulo {
+        font-size: 14px;
+        text-align: center;
+    }
+    section.photo-stamps {
+        margin-top: 25px;
+    }
+    .cards-total{
+        width: 75%;
+        margin: 0 auto;
+      }
+    .botao-wpp{
+        width: 45px;
+        height: 45px;
+    }
+    .location p:last-child {
+    font-size: .8rem;
+  } 
+}
+@media (max-width: 375px) {
+    .loja-descricao .subtitulo {
+        font-size: 13px;
+        text-align: center;
+        line-height: 28px;
+    }
+    .cards-total{
+        width: 75%;
+        margin: 0 auto;
+      }
+    .location p:last-child {
+    font-size: .7rem;
+    }   
+    .rodape span{
+        display: block;
+    }
+}
+@media (max-width: 320px) {
+    body {
+        margin: 3px;
+    }
+    section.photo-stamps {
+        margin-top: 25px;
+    }
+    .cards-total{
+        width: 50%;
+        margin: 0 auto;
+      }
+    .card {
+        text-align: left;
+    }
+    .card img {
+       padding: 5px;
+    }
+    .logo{
+        font-size: 0.9rem;
+    }
+    .location p:last-child {
+    font-size: .7rem;
+    text-align: center;
+  } 
+}
