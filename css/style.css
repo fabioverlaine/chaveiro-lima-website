@@ -37,10 +37,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  z-index: 1000;
   background: var(--royal-blue-light);
-  padding: 1rem;
   color: #ffca3a;
-  /* margin: .5rem 0; */
 }
 
 .logo {
@@ -48,6 +52,7 @@ a {
   font-weight: bold;
   letter-spacing: 2px;
 }
+
 
 .menu {
   display: flex;
@@ -131,14 +136,12 @@ img{
 .boxes {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
 }
 
 .boxes .card-box {
     text-align: center;
-    border: 2px solid #daaf6980;
-    border-radius: 8px;
-    padding: 40px 15px;
+    padding: 10px 15px 40px 15px;
     margin-top: 20px;
 }
 
@@ -154,11 +157,10 @@ img{
 
 .boxes .card-box .paragraph-stamp {
     max-width: 350px;
-    height: 100px;
     text-indent: 3%;
+    line-height: 23px;
     font-style: italic;
     text-align: center;
-
 }
 
 /*--------------MAPS----------------*/
@@ -349,6 +351,10 @@ img{
     }
     section.photo-stamps {
         margin-top: 25px;
+    }
+
+    .card-box {
+        margin: auto;
     }
     .cards-total{
         width: 75%;
