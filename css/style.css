@@ -278,6 +278,7 @@ img{
       border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
       border-radius: 0;
   }
+  /* esconder link contato */
   .menu li:nth-child(3) {
     display: none;
   }
