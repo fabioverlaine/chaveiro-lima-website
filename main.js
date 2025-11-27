@@ -52,4 +52,3 @@ menuLinks.forEach(link => {
     setAria(); // Atualiza o aria-expanded e aria-label
   });
 });
-

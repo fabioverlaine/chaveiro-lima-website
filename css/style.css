@@ -10,7 +10,6 @@
 
 /*RAIZ CORES*/
 :root {
-    font-size: 16px; 
   --royal-blue-light: #404eed;
   --royal-blue-dark: #3946d4;
   --yellow: #ffca3a;
@@ -25,6 +24,7 @@ html {
 body {
   height: 100vh;
   font-family: sans-serif;
+  font-size: 1rem; 
   background: var(--background);
 }
 
@@ -45,6 +45,7 @@ a {
   z-index: 1000;
   background: var(--royal-blue-light);
   color: #ffca3a;
+  box-shadow: 2px 4px 20px 5px rgba(0, 89, 255, 0.4);
 }
 
 .logo {
@@ -88,7 +89,8 @@ nav img{
 .sobre {
     display: flex;
     justify-content: space-between;
-    margin-top: 60px; 
+    /* margin-top: 60px; */
+    padding: 90px 20px;
 }
 
 .loja-descricao {
@@ -124,7 +126,7 @@ img{
 .photo-stamps {
     background-color: #f2cc8f;
     margin-top: 100px;
-    padding: 60px 20px;
+    padding: 90px 20px;
 }
 
 .photo-stamps .subtitle-stamp {
@@ -172,11 +174,12 @@ img{
     gap: 20px;
     align-items: center;
     color: var(--white);
-    padding: 20px;
+    padding: 90px 20px;
 }
 
 .location iframe {
     border-radius: 12px;
+    height: 50vh;
     
 }
 
@@ -275,6 +278,9 @@ img{
       border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
       border-radius: 0;
   }
+  .menu li:nth-child(3) {
+    display: none;
+  }
   .logo {
     font-size: 1.2rem;
   }
@@ -308,7 +314,7 @@ img{
       transition: 0.3s;
   }
   .nav.active .menu {
-      height: calc(70vh - 4.6875rem);
+      height: calc(68vh - 4.6875rem);
       visibility: visible;
       overflow-y: auto;
   }
